@@ -3,6 +3,10 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/next-themes";
 import { ModeToggle } from "@/components/ui/dark-mode";
+import { Sidebar, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/ui/app-sidebar";
+import { Home } from "./dash";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,6 +33,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
     <head />
     <body>
+
       <ModeToggle />
       <ThemeProvider
         attribute="class"
@@ -36,8 +41,10 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
-        {children}
+        <Home/>
       </ThemeProvider>
+      
+
     </body>
   </html>
   
