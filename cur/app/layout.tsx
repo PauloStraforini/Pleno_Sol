@@ -3,8 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/next-themes";
 import { ModeToggle } from "@/components/ui/dark-mode";
-import { Sidebar, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/ui/app-sidebar";
+
 import { Home } from "./dash";
 
 

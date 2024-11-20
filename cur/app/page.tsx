@@ -1,10 +1,8 @@
 "use client";
 
 import { Component } from "@/components/charts/bar_charts_mult";
-import { AppSidebar } from "@/components/ui/app-sidebar";
+
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
-import { ThemeProvider } from "@/components/ui/next-themes";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AreaChart, Area, CartesianGrid, XAxis, Tooltip, YAxis } from "recharts";
 
 const chartData = [
