@@ -679,6 +679,9 @@ video {
 .z-20 {
   z-index: 20;
 }
+.z-30 {
+  z-index: 30;
+}
 .z-50 {
   z-index: 50;
 }
@@ -687,9 +690,6 @@ video {
 }
 .z-\[1\] {
   z-index: 1;
-}
-.z-30 {
-  z-index: 30;
 }
 .col-span-2 {
   grid-column: span 2 / span 2;
@@ -772,14 +772,14 @@ video {
 .hidden {
   display: none;
 }
+.aspect-auto {
+  aspect-ratio: auto;
+}
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
 .aspect-video {
   aspect-ratio: 16 / 9;
-}
-.aspect-auto {
-  aspect-ratio: auto;
 }
 .size-4 {
   width: 1rem;
@@ -857,14 +857,14 @@ video {
 .max-h-96 {
   max-height: 24rem;
 }
+.max-h-\[250px\] {
+  max-height: 250px;
+}
 .max-h-\[300px\] {
   max-height: 300px;
 }
 .max-h-screen {
   max-height: 100vh;
-}
-.max-h-\[250px\] {
-  max-height: 250px;
 }
 .min-h-0 {
   min-height: 0px;
@@ -935,6 +935,9 @@ video {
 .w-\[100px\] {
   width: 100px;
 }
+.w-\[150px\] {
+  width: 150px;
+}
 .w-\[1px\] {
   width: 1px;
 }
@@ -949,9 +952,6 @@ video {
 }
 .w-px {
   width: 1px;
-}
-.w-\[150px\] {
-  width: 150px;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1138,6 +1138,11 @@ video {
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-y-0 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0px * var(--tw-space-y-reverse));
+}
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1157,11 +1162,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
 }
 .overflow-auto {
   overflow: auto;
@@ -1291,9 +1291,9 @@ video {
 .bg-destructive {
   background-color: hsl(var(--destructive));
 }
-.bg-emerald-700 {
+.bg-emerald-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(4 120 87 / var(--tw-bg-opacity, 1));
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
 }
 .bg-foreground {
   background-color: hsl(var(--foreground));
@@ -1328,24 +1328,20 @@ video {
 .bg-transparent {
   background-color: transparent;
 }
-.bg-emerald-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+.fill-background {
+  fill: hsl(var(--background));
 }
 .fill-current {
   fill: currentColor;
-}
-.fill-primary {
-  fill: hsl(var(--primary));
-}
-.fill-background {
-  fill: hsl(var(--background));
 }
 .fill-foreground {
   fill: hsl(var(--foreground));
 }
 .fill-muted-foreground {
   fill: hsl(var(--muted-foreground));
+}
+.fill-primary {
+  fill: hsl(var(--primary));
 }
 .p-0 {
   padding: 0px;
@@ -1392,6 +1388,10 @@ video {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1420,17 +1420,16 @@ video {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.pb-0 {
+  padding-bottom: 0px;
 }
 .pb-3 {
   padding-bottom: 0.75rem;
@@ -1474,9 +1473,6 @@ video {
 .pt-4 {
   padding-top: 1rem;
 }
-.pb-0 {
-  padding-bottom: 0px;
-}
 .text-left {
   text-align: left;
 }
@@ -1488,6 +1484,10 @@ video {
 }
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .text-\[0\.8rem\] {
   font-size: 0.8rem;
@@ -1507,10 +1507,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 .font-bold {
   font-weight: 700;
@@ -2393,6 +2389,11 @@ body {
 }
 
 
+.data-\[active\=true\]\:bg-muted\/50[data-active="true"] {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+
 .data-\[active\=true\]\:bg-sidebar-accent[data-active="true"] {
   background-color: hsl(var(--sidebar-accent));
 }
@@ -2445,11 +2446,6 @@ body {
 
 .data-\[state\=unchecked\]\:bg-input[data-state="unchecked"] {
   background-color: hsl(var(--input));
-}
-
-
-.data-\[active\=true\]\:bg-muted\/50[data-active="true"] {
-  background-color: hsl(var(--muted) / 0.5);
 }
 
 
